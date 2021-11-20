@@ -44,14 +44,14 @@
   }
 
   footer {
-  grid-template-columns: 1fr;
-  background-color: #999;
-  background-image: linear-gradient(#999, #111);
-  text-align: center;
-  text-shadow: 1px 1px #000;
-  color: #999;
-  padding: 1em 0;
-}
+    grid-template-columns: 1fr;
+    background-color: #999;
+    background-image: linear-gradient(#999, #111);
+    text-align: center;
+    text-shadow: 1px 1px #000;
+    color: #999;
+    padding: 1em 0;
+  }
 </style>
 
 <body>
@@ -66,7 +66,7 @@
         <a href="#about" class="w3-bar-item w3-button">ПРО НАС</a>
         <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> ВОДІЇ</a>
         <a href="#routes" class="w3-bar-item w3-button"><i class="fa fa-th"></i> МАРШРУТИ</a>
-        <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-hryvnia"></i> ЦІНИ</a>
+        <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-hryvnia"></i> ВАРТІСТЬ</a>
         <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> КОНТАКТИ</a>
       </div>
       <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -83,7 +83,7 @@
     <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ПРО НАС</a>
     <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">ВОДІЇ</a>
     <a href="#routes" onclick="w3_close()" class="w3-bar-item w3-button">МАРШРУТИ</a>
-    <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">ЦІНИ</a>
+    <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">ВАРТІСТЬ</a>
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">КОНТАКТИ</a>
   </nav>
 
@@ -290,103 +290,187 @@
   -->
 
   <!-- Pricing Section -->
-  <div class="w3-container bgimg-2 w3-center" style="padding:128px 16px" id="pricing">
-    <div class="w3-content w3-card-4">
-      <table class="w3-table-all w3-centered w3-opacity">
-        <header class="w3-container w3-content w3-green">
-          <h3>Трансфер з Івано-Франківська в КАРПАТИ</h3>
-        </header>
-        <tr class="w3-dark-grey">
-          <th>Пункт призначення:</th>
-          <th>Мінівен 6-8 місць, <i class="fas fa-hryvnia"></i></th>
-          <th>Мікроавтобус 12 місць, <i class="fas fa-hryvnia"></i></th>
-          <th>Мікроавтобус 12 місць, <i class="fas fa-hryvnia"></i></th>
-        </tr>
-        <tr>
-          <td>Яремче</td>
-          <td>800</td>
-          <td>1 200</td>
-          <td>1 200</td>
-        </tr>
-        <tr>
-          <td>Буковель</td>
-          <td>1 100</td>
-          <td>1 600</td>
-          <td>1 600</td>
-        </tr>
-        <tr>
-          <td>Ясіня</td>
-          <td>1 400</td>
-          <td>2 100</td>
-          <td>2 100</td>
-        </tr>
-        <tr>
-          <td>Ворохта</td>
-          <td>1 100</td>
-          <td>1 600</td>
-          <td>1 600</td>
-        </tr>
-        <tr>
-          <td>Верховина</td>
-          <td>1 400</td>
-          <td>2 400</td>
-          <td>2 400</td>
-        </tr>
-        <tr>
-          <td>Кваси</td>
-          <td>1 600</td>
-          <td>3 000</td>
-          <td>3 000</td>
-        </tr>
-        <tr>
-          <td>Славське</td>
-          <td>2 500</td>
-          <td>3 000</td>
-          <td>3 000</td>
-        </tr>
-        <tr>
-          <td>Пилипець</td>
-          <td>2 500</td>
-          <td>3 000</td>
-          <td>3 000</td>
-        </tr>
-        <tr>
-          <td>Львів</td>
-          <td>1 700</td>
-          <td>2 100</td>
-          <td>2 100</td>
-        </tr>
-        <tr>
-          <td>Ділове</td>
-          <td>2000</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Шибене</td>
-          <td>2 400</td>
-          <td>3 000</td>
-          <td>3 000</td>
-        </tr>
-        <tr>
-          <td>Осмолода</td>
-          <td>1600</td>
-          <td>2 200</td>
-          <td>2 200</td>
-        </tr>
-        <tr>
-          <td>Дземброня</td>
-          <td>2 000</td>
-          <td>3 000</td>
-          <td>3 000</td>
-        </tr>
-        <tr>
-          <td>Козьмещик</td>
-          <td>2 000</td>
-          <td>3 000</td>
-          <td>3 000</td>
-        </tr>
-      </table>
+  <div class="w3-container bgimg-2" style="padding:128px 16px" id="pricing">
+    <div class="w3-container w3-content">
+      <h2>Трансфер в КАРПАТИ</h2>
+      <p>Ціни на групові трансфери в КАРПАТИ комфортабельними мікроавтобусами</p>
+
+      <div class="w3-bar w3-dark-grey">
+        <button class="w3-bar-item w3-button tablink w3-black" onclick="openCity(event,'IF')">З Івано-Франківська</button>
+        <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'LV')">Зі Львова</button>
+        <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'TP')">З Тернополя</button>
+      </div>
+
+      <div id="IF" class="city">
+        <table class="w3-table-all w3-centered w3-opacity">
+          <tr class="w3-dark-grey">
+            <th>Пункт призначення:</th>
+            <th>Мінівен 6-8 місць, <i class="fas fa-hryvnia"></i></th>
+            <th>Мікроавтобус 12 місць, <i class="fas fa-hryvnia"></i></th>
+            <th>Мікроавтобус 12 місць, <i class="fas fa-hryvnia"></i></th>
+          </tr>
+          <tr>
+            <td>Яремче</td>
+            <td>800</td>
+            <td>1 200</td>
+            <td>1 200</td>
+          </tr>
+          <tr>
+            <td>Буковель</td>
+            <td>1 100</td>
+            <td>1 600</td>
+            <td>1 600</td>
+          </tr>
+          <tr>
+            <td>Ясіня</td>
+            <td>1 400</td>
+            <td>2 100</td>
+            <td>2 100</td>
+          </tr>
+          <tr>
+            <td>Ворохта</td>
+            <td>1 100</td>
+            <td>1 600</td>
+            <td>1 600</td>
+          </tr>
+          <tr>
+            <td>Верховина</td>
+            <td>1 400</td>
+            <td>2 400</td>
+            <td>2 400</td>
+          </tr>
+          <tr>
+            <td>Кваси</td>
+            <td>1 600</td>
+            <td>3 000</td>
+            <td>3 000</td>
+          </tr>
+          <tr>
+            <td>Славське</td>
+            <td>2 500</td>
+            <td>3 000</td>
+            <td>3 000</td>
+          </tr>
+          <tr>
+            <td>Пилипець</td>
+            <td>2 500</td>
+            <td>3 000</td>
+            <td>3 000</td>
+          </tr>
+          <tr>
+            <td>Львів</td>
+            <td>1 700</td>
+            <td>2 100</td>
+            <td>2 100</td>
+          </tr>
+          <tr>
+            <td>Ділове</td>
+            <td>2000</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Шибене</td>
+            <td>2 400</td>
+            <td>3 000</td>
+            <td>3 000</td>
+          </tr>
+          <tr>
+            <td>Осмолода</td>
+            <td>1600</td>
+            <td>2 200</td>
+            <td>2 200</td>
+          </tr>
+          <tr>
+            <td>Дземброня</td>
+            <td>2 000</td>
+            <td>3 000</td>
+            <td>3 000</td>
+          </tr>
+          <tr>
+            <td>Козьмещик</td>
+            <td>2 000</td>
+            <td>3 000</td>
+            <td>3 000</td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="LV" class="city" style="display:none">
+        <table class="w3-table-all w3-centered w3-opacity">
+          <tr class="w3-dark-grey">
+            <th>Пункт призначення:</th>
+            <th>Мінівен 6-8 місць, <i class="fas fa-hryvnia"></i></th>
+            <th>Мікроавтобус 12 місць, <i class="fas fa-hryvnia"></i></th>
+            <th>Мікроавтобус 12 місць, <i class="fas fa-hryvnia"></i></th>
+          </tr>
+          <tr>
+            <td>Яремче</td>
+            <td>800</td>
+            <td>1 200</td>
+            <td>1 200</td>
+          </tr>
+          <tr>
+            <td>Буковель</td>
+            <td>1 100</td>
+            <td>1 600</td>
+            <td>1 600</td>
+          </tr>
+          <tr>
+            <td>Ясіня</td>
+            <td>1 400</td>
+            <td>2 100</td>
+            <td>2 100</td>
+          </tr>
+          <tr>
+            <td>Ворохта</td>
+            <td>1 100</td>
+            <td>1 600</td>
+            <td>1 600</td>
+          </tr>
+          <tr>
+            <td>Верховина</td>
+            <td>1 400</td>
+            <td>2 400</td>
+            <td>2 400</td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="TP" class="city" style="display:none">
+        <table class="w3-table-all w3-centered w3-opacity">
+          <tr class="w3-dark-grey">
+            <th>Пункт призначення:</th>
+            <th>Мінівен 6-8 місць, <i class="fas fa-hryvnia"></i></th>
+            <th>Мікроавтобус 12 місць, <i class="fas fa-hryvnia"></i></th>
+            <th>Мікроавтобус 12 місць, <i class="fas fa-hryvnia"></i></th>
+          </tr>
+          <tr>
+            <td>Яремче</td>
+            <td>800</td>
+            <td>1 200</td>
+            <td>1 200</td>
+          </tr>
+          <tr>
+            <td>Буковель</td>
+            <td>1 100</td>
+            <td>1 600</td>
+            <td>1 600</td>
+          </tr>
+          <tr>
+            <td>Ясіня</td>
+            <td>1 400</td>
+            <td>2 100</td>
+            <td>2 100</td>
+          </tr>
+          <tr>
+            <td>Ворохта</td>
+            <td>1 100</td>
+            <td>1 600</td>
+            <td>1 600</td>
+          </tr>
+        </table>
+      </div>
     </div>
 
     <!--
@@ -505,6 +589,21 @@
     // Close the sidebar with the close button
     function w3_close() {
       mySidebar.style.display = "none";
+    }
+
+    // Pricing Navigation Tabs
+    function openCity(evt, cityName) {
+      var i, x, tablinks;
+      x = document.getElementsByClassName("city");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" w3-black", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " w3-black";
     }
   </script>
 
